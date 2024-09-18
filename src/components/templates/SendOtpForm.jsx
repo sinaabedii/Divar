@@ -13,7 +13,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
   return (
     <form
       onSubmit={submitHandler}
-      className="max-w-lg m-auto flex flex-col mt-24 border-2 border-solid border-gray-300 rounded-md p-7"
+      className="container max-w-lg m-auto flex flex-col mt-24 border-2 border-solid border-gray-300 rounded-md p-1"
     >
       <p className="text-lg font-normal mb-5">ورود به حساب کاربری</p>
       <span className="text-gray-400 text-sm mb-5">
@@ -29,7 +29,12 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
         value={mobile}
         onChange={(e) => setMobile(e.target.value)}
       />
-      <button className="w-16 px-1 py-3 border-none bg-red-800 text-white rounded-md cursor-pointer" type="submit">ارسال کد تایید</button>
+      <button
+        className="w-16 px-1 py-3 border-none bg-red-800 text-white rounded-md cursor-pointer"
+        type="submit"
+      >
+        ارسال کد تایید
+      </button>
     </form>
   );
 }
