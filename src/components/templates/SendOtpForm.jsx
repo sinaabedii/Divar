@@ -13,7 +13,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
   return (
     <form
       onSubmit={submitHandler}
-      className="container max-w-max m-auto flex flex-col mt-24 border-2 border-solid border-gray-300 rounded-md p-1"
+      className="container max-w-lg m-auto flex flex-col mt-24 border-2 border-solid border-gray-300 rounded-md p-1"
     >
       <p className="text-lg font-normal mb-6 border-b-2 pb-6 p-5">
         ورود به حساب کاربری
@@ -29,18 +29,18 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
       </span>
       <div className="relative flex">
         <input
-          className="m-4  w-full px-1 py-2 mx-6 border-2 border-solid pr-5 border-gray-300 rounded-md placeholder:font-extralight outline-red-700 bg-inherit"
+          className="m-4 w-full py-2 mx-6 border-2 border-solid pr-5 pl-16 border-gray-300 rounded-md placeholder:text-right placeholder:font-extralight outline-red-700 bg-inherit"
           type="tel"
           id="input"
           placeholder="شماره موبایل"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
         />
-        <p className="w-12 absolute bg-gray-100 items-center justify-center text-center rounded-2xl px-4 py-1 font-extralight text-sm">
+        <p className="w-12 mr-80 absolute mt-6 bg-gray-100 items-center justify-center text-center rounded-2xl px-4 py-1 font-extralight text-sm">
           ۹۸+
         </p>
       </div>
-      <p className="text-gray-500 text-base font-extralight px-6">
+      <p className="text-gray-500 text-base font-extralight px-6 pb-8 mb-4 border-b-2">
         <a href="" className="text-red-700">
           شرایط استفاده از خدمات{" "}
         </a>
@@ -51,7 +51,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
         دیوار را می پذیرم.
       </p>
       <button
-        className="w-28 py-2 border-none bg-red-700  text-white rounded-md text-lg cursor-pointer hover:bg-red-800 hover:transition-colors"
+        className="w-28 py-2 mr-72 border-none mb-3 bg-red-700 text-white rounded-md text-lg cursor-pointer hover:bg-red-800 hover:transition-colors"
         type="submit"
       >
         تأیید
