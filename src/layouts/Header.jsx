@@ -22,7 +22,7 @@ function Header() {
           <input
             type="text"
             placeholder="جستجو در همه آگهی ها"
-            className="h-10 w-96 mr-10 mt-1 rounded text-sm bg-gray-200 border-none px-8 text-gray-600 outline-none placeholder:text-gray-400 placeholder:font-extralight"
+            className="h-10 w-96 mr-4 mt-1 rounded text-sm bg-gray-200 border-none px-8 text-gray-600 outline-none placeholder:text-gray-400 placeholder:font-extralight"
           />
           <button className="border-none -m-7 text-xl text-gray-400 -mb-8 h-8  hover:text-gray-600">
             <CiSearch />
