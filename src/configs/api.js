@@ -9,7 +9,7 @@ const api = axios.create({
   },
 });
 
-//request to sever
+//request to server
 api.interceptors.request.use(
   (request) => {
     const token = getCookie("accessToken");
@@ -23,7 +23,7 @@ api.interceptors.request.use(
   }
 );
 
-//response the sever
+//response the server
 api.interceptors.response.use(
   (response) => {
     return response;

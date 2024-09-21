@@ -1,7 +1,6 @@
 import { BsChat } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
-import { MdSupportAgent } from "react-icons/md";
 import { SlSupport } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
