@@ -14,7 +14,7 @@ function AddPost() {
     amount: null,
     images: null,
   });
-
+  const baseURL = import.meta.env.VITE_BASE_URL;
   const queryClient = useQueryClient();
   const { data } = useQuery(["get-categories"], getCategory, {
     onSuccess: () => queryClient.invalidateQueries("my-post-list"),
@@ -41,7 +41,7 @@ function AddPost() {
     }
     const token = getCookie("accessToken");
     axios
-      .post(`${import.meta.env.VITE_BASE_URL}post/create`, formData, {
+      .post(`${baseURL}post/create`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `bearer ${token}`,

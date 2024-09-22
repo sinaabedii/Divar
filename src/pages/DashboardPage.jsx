@@ -5,7 +5,7 @@ function DashboardPage() {
   return (
     <div>
       <AddPost />
-      {/* <PostList /> */}
+      <PostList />
     </div>
   );
 }
