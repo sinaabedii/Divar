@@ -1,6 +1,9 @@
+import { useState } from "react";
+import axios from "axios";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getCategory } from "../../services/admin";
-import { useState } from "react";
+import { getCookie } from "../../utils/cookie";
+import toast from "react-hot-toast";
 
 function AddPost() {
   const [form, setForm] = useState({
@@ -11,6 +14,7 @@ function AddPost() {
     amount: null,
     images: null,
   });
+
   const queryClient = useQueryClient();
   const { data } = useQuery(["get-categories"], getCategory, {
     onSuccess: () => queryClient.invalidateQueries("my-post-list"),
@@ -30,7 +34,21 @@ function AddPost() {
 
   const addHandler = (event) => {
     event.preventDefault();
-    console.log(form);
+    //create formData in dataBase for add image file
+    const formData = new FormData();
+    for (let item in form) {
+      formData.append(item, form[item]);
+    }
+    const token = getCookie("accessToken");
+    axios
+      .post(`${import.meta.env.VITE_BASE_URL}post/create`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `bearer ${token}`,
+        },
+      })
+      .then((response) => toast.success(response.data.message))
+      .catch((error) => toast.error("مشکلی پیش آمده است"));
   };
 
   return (
