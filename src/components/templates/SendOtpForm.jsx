@@ -29,7 +29,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
       </span>
       <div className="relative flex">
         <input
-          className="m-4 w-full py-2 mx-6 border border-solid pr-5 pl-16 border-gray-300 rounded-md placeholder:text-right placeholder:font-extralight outline-red-700 bg-inherit"
+          className="m-4 w-full py-2 mx-5 border border-solid pr-5 pl-20 border-gray-300 rounded-md placeholder:text-right placeholder:font-extralight outline-red-800 bg-inherit"
           type="tel"
           id="input"
           placeholder="شماره موبایل"
@@ -40,18 +40,18 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
           ۹۸+
         </p>
       </div>
-      <p className="text-gray-500 text-base font-extralight px-6 pb-8 mb-4 border-b">
+      <p className="text-gray-500 text-sm font-extralight px-6 pb-8 mb-4 border-b">
         <Link
           to="/General_terms_and_conditions"
           target="_blank"
-          className="text-red-700"
+          className="text-red-800"
         >
           <a>شرایط استفاده از خدمات </a>
         </Link>
         و
         <Link
           to="/account_privacy_policies"
-          className="text-red-700"
+          className="text-red-800"
           target="_blank"
         >
           <a>حریم خصوصی </a>
@@ -59,7 +59,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
         دیوار را می پذیرم.
       </p>
       <button
-        className="w-28 py-2 mr-80 border-none mb-3 bg-red-700 text-white rounded-md text-lg cursor-pointer hover:bg-red-800 hover:transition-colors"
+        className="w-28 py-2 mr-80 border-none mb-3 bg-red-800 text-white rounded-md text-lg cursor-pointer hover:bg-red-800 hover:transition-colors"
         type="submit"
       >
         تأیید

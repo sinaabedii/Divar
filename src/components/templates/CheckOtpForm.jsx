@@ -21,23 +21,24 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
       console.log(error.response.data.message);
     }
   };
+
   return (
     <form
       onSubmit={submitHandler}
-      className="container max-w-lg m-auto flex flex-col mt-24 border-2 border-solid border-gray-300 rounded-md p-7"
+      className="container max-w-md m-auto flex flex-col mt-24 border border-solid border-gray-300 rounded-md p-1"
     >
-      <p className="text-lg font-normal mb-6 border-b-2 pb-6 p-5 pr-5">
+      <p className="text-lg font-normal mb-3 border-b pb-6 p-5">
         ورود به حساب کاربری
       </p>
-      <label htmlFor="input" className="my-8 pr-5 text-lg">
+      <label htmlFor="input" className="p-5 mb-3 text-lg">
         کد تأیید را وارد کنید
       </label>
-      <span className="text-gray-400 text-sm mb-5 pr-5 font-extralight">
+      <span className="text-gray-500 text-sm mb-5 pr-5 font-extralight">
         کد پیامک شده به شمارۀ «{mobile}» را وارد کنید.
       </span>
       <div className="grid">
         <input
-          className="w-full py-2 px-3 border-2 border-solid border-gray-300 rounded-md placeholder:text-right placeholder:font-extralight outline-red-700 bg-inherit "
+          className="mb-2 py-2 mx-5 border border-solid px-5 border-gray-300 rounded-md placeholder:text-right placeholder:font-extralight outline-red-800 bg-inherit "
           type="text"
           id="input"
           maxLength="5"
@@ -45,19 +46,23 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
           value={code}
           onChange={(e) => setCode(e.target.value)}
         />
+        <span className="text-left ml-5">
+          <button
+            className="bg-gray-100 text-sm w-32 rounded-3xl text mt-1 px-1 py-1.5 text-gray-500 hover:bg-gray-200 hover:transition-colors"
+            onClick={() => setStep(1)}
+          >
+            تغییر شمارۀ موبایل
+          </button>
+        </span>
+      </div>
+      <div className="w-full border-t mt-5 py-3 text-left">
         <button
-          className="bg-gray-100 text-sm w-32  rounded-3xl mt-2 px-1 py-1.5 text-gray-400 hover:bg-gray-200 hover:transition-colors"
-          onClick={() => setStep(1)}
+          className="w-24 ml-5 py-2.5 left-0 border-none bg-red-800 text-white rounded-md cursor-pointer"
+          type="submit"
         >
-          تغییر شمارۀ موبایل
+          ورود
         </button>
       </div>
-      <button
-        className="w-16 px-1 py-3 border-none bg-red-800 text-white rounded-md cursor-pointer"
-        type="submit"
-      >
-        ورود
-      </button>
     </form>
   );
 }

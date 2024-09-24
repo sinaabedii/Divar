@@ -3,10 +3,11 @@ import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { SlSupport } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import HamburgerMenu from "../components/templates/HamburgerMenu";
 
 function Header() {
   return (
-    <header className="flex justify-between items-center sticky top-0 border-b bg-white border-gray-300 px-2 pb-2 mx-8 mb-5">
+    <header className="flex justify-between items-center sticky top-0 border-b bg-white border-gray-300 px-16 py-2 mb-5">
       <div className="flex">
         <div className="flex items-center">
           <Link to="/">
@@ -29,27 +30,17 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center gap-4">
-        <Link to="/auth">
+        {/* <Link to="/auth">
           <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
             <FaRegUser className="w-4 h-4" />
             <p className="text-sm">دیوار من</p>
           </span>
-        </Link>
-        <Link to="/chat">
-          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
-            <BsChat className="w-4 h-4" />
-            <p className="text-sm">چت</p>
-          </span>
-        </Link>
-        <Link>
-          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
-            <SlSupport className="w-4 h-4" />
-            <p className="text-sm">پشتیبانی</p>
-          </span>
-        </Link>
+        </Link> */}
+        
+        <HamburgerMenu />
         <Link
           to="/dashboard"
-          className="bg-red-700 text-white h-10 w-20 leading-10 text-center rounded-md mr-10 hover:bg-red-800 hover:transition-colors"
+          className="bg-red-800 text-white h-10 w-20 leading-10 text-center rounded-md mr-10 hover:bg-red-800 hover:transition-colors"
         >
           ثبت آگهی
         </Link>

@@ -4,7 +4,7 @@ import { SiAparat } from "react-icons/si";
 
 function Footer() {
   return (
-    <footer className="text-center w-3/4 mt-24 pt-3 mx-auto flex justify-between px-6 mb-5">
+    <footer className="text-center w-full mt-24 pt-3 mx-auto flex justify-between px-16 mb-5">
       <div className="flex gap-3">
         <img src="divar.svg" className="text-gray-400" />
         <a className="text-gray-400 text-sm border-r-2 mr-1 pr-2 hover:text-gray-600 cursor-pointer transition-colors">
@@ -23,7 +23,7 @@ function Footer() {
           تماس با پشتیبانی
         </a>
       </div>
-      <div className="flex w-28 justify-between ">
+      <div className="flex w-36 justify-between ">
         <a href="https://twitter.com/divar_official">
           <FaTwitter className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer transition-colors" />
         </a>

@@ -52,7 +52,7 @@ function AddPost() {
   };
 
   return (
-    <form onChange={changeHandler}>
+    <form onChange={changeHandler} className="mx-9 w-1/3 border-l-2">
       <h3 className="mb-7 border-b-2 border-red-800 w-fit pb-1">
         افزوردن آگهی
       </h3>
@@ -63,33 +63,33 @@ function AddPost() {
         type="text"
         name="title"
         id="title"
-        className="block w-80 p-1 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 text-gray-600 border-2 rounded-md mb-3 outline-gray-400"
       />
       <label htmlFor="content">توضیحات</label>
       <textarea
         name="content"
         id="content"
-        className="block w-80 p-1 border-2 rounded-md mb-3 h-24 max-h-fit outline-gray-400"
+        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 h-24 max-h-fit outline-gray-400"
       />
       <label htmlFor="amount">قیمت</label>
       <input
         type="number"
         name="amount"
         id="amount"
-        className="block w-80 p-1 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
       />
       <label htmlFor="city">شهر</label>
       <input
         type="text"
         name="city"
         id="city"
-        className="block w-80 p-1 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
       />
       <label htmlFor="category">دسته بندی</label>
       <select
         name="category"
         id="category"
-        className="block w-80 p-1 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
       >
         {data?.data.map((item) => (
           <option key={item._id} value={item._id}>
@@ -102,7 +102,7 @@ function AddPost() {
         type="file"
         name="images"
         id="images"
-        className="block w-80 p-1 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
       />
       <button
         onClick={addHandler}

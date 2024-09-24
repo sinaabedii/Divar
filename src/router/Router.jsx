@@ -11,9 +11,10 @@ import Loader from "../components/modules/Loader";
 import GeneralTermsConditions from "../pages/GeneralTermsConditions";
 import Chat from "../pages/Chat";
 import AccountPrivacyPolicies from "../pages/AccountPrivacyPolicies";
+import DetailsPage from "../pages/DetailsPage";
 
 function Router() {
-  const { data, isLoading, error } = useQuery(["profile"], getProfile);
+  const { data, isLoading } = useQuery(["profile"], getProfile);
   if (isLoading) return <Loader />;
 
   return (
@@ -47,6 +48,7 @@ function Router() {
         element={<AccountPrivacyPolicies />}
       />
       <Route path="/chat" element={<Chat />} />
+      <Route path="/post/:id" element={<DetailsPage />} />
     </Routes>
   );
 }
