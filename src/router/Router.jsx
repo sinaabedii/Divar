@@ -8,6 +8,9 @@ import AuthPage from "../pages/AuthPage";
 import AdminPage from "../pages/AdminPage";
 import PageNotFound from "../pages/PageNotFound";
 import Loader from "../components/modules/Loader";
+import GeneralTermsConditions from "../pages/GeneralTermsConditions";
+import Chat from "../pages/Chat";
+import AccountPrivacyPolicies from "../pages/AccountPrivacyPolicies";
 
 function Router() {
   const { data, isLoading, error } = useQuery(["profile"], getProfile);
@@ -35,6 +38,15 @@ function Router() {
         }
       />
       <Route path="*" element={<PageNotFound />} />
+      <Route
+        path="/General_terms_and_conditions"
+        element={<GeneralTermsConditions />}
+      />
+      <Route
+        path="/account_privacy_policies"
+        element={<AccountPrivacyPolicies />}
+      />
+      <Route path="/chat" element={<Chat />} />
     </Routes>
   );
 }

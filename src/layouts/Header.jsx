@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex justify-between items-center border-b-2 border-gray-300 px-2 pb-3 mx-6 mb-5">
+    <header className="flex justify-between items-center sticky top-0 border-b bg-white border-gray-300 px-2 pb-2 mx-8 mb-5">
       <div className="flex">
         <div className="flex items-center">
           <Link to="/">
-            <img src="divar.svg" className="w-16 ml-4 border-l-2 pl-6" />
+            <img src="divar.svg" className="w-16 h-10 ml-4 border-l-2 pl-6" />
           </Link>
           <span className="flex items-center text-gray-400 h-12 gap-1 px-3 py-2 rounded-md cursor-pointer hover:bg-slate-50 hover:transition-colors">
-            <img src="location.svg" />
-            <p>تهران</p>
+            <img className="w-5 h-5" src="location.svg" />
+            <p className="text-sm">تهران</p>
           </span>
         </div>
         <div className="flex items-center ">
@@ -30,26 +30,26 @@ function Header() {
       </div>
       <div className="flex items-center gap-4">
         <Link to="/auth">
-          <span className="flex justify-center items-center gap-1 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
-            <FaRegUser className="w-5 h-5" />
-            <p>دیوار من</p>
+          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
+            <FaRegUser className="w-4 h-4" />
+            <p className="text-sm">دیوار من</p>
+          </span>
+        </Link>
+        <Link to="/chat">
+          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
+            <BsChat className="w-4 h-4" />
+            <p className="text-sm">چت</p>
           </span>
         </Link>
         <Link>
-          <span className="flex justify-center items-center gap-1 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
-            <BsChat className="w-5 h-5" />
-            <p>چت</p>
-          </span>
-        </Link>
-        <Link>
-          <span className="flex justify-center items-center gap-1 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
-            <SlSupport className="w-5 h-5" />
-            <p>پشتیبانی</p>
+          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
+            <SlSupport className="w-4 h-4" />
+            <p className="text-sm">پشتیبانی</p>
           </span>
         </Link>
         <Link
           to="/dashboard"
-          className="bg-red-800 text-white h-10 w-24 leading-10 text-center rounded-md mr-10 "
+          className="bg-red-700 text-white h-10 w-20 leading-10 text-center rounded-md mr-10 hover:bg-red-800 hover:transition-colors"
         >
           ثبت آگهی
         </Link>

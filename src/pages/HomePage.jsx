@@ -7,8 +7,8 @@ import { getCategory } from "../services/admin";
 
 function HomePage() {
   // It is done for loading the main page and sidebar
-  const { data: posts, isLoading: postsLoading } = useQuery(
-    ["all-post-list"],
+  const { data: AllPosts, isLoading: postsLoading } = useQuery(
+    ["get-all-post-list"],
     getAllPosts
   );
   const { data: categories, isLoading: categoryLoading } = useQuery(
@@ -23,7 +23,7 @@ function HomePage() {
       ) : (
         <div className="flex">
           <Sidebar categories={categories} />
-          <Main posts={posts} />
+          <Main AllPosts={AllPosts} />
         </div>
       )}
     </>
