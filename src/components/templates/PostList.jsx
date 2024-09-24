@@ -22,7 +22,7 @@ function PostList() {
           {data_list.map((post) => (
             <div
               key={post._id}
-              className="flex items-center border-2 w-full  text-center border-gray-300 rounded-md my-1 p-1"
+              className="flex items-center justify-between border-2 w-full  text-center border-gray-300 rounded-md my-1 p-1"
             >
               <img
                 src={`${baseURL}${post.images[0]}`}

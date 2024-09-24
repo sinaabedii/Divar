@@ -1,9 +1,8 @@
+import HamburgerMenu from "../components/templates/HamburgerMenu";
+import { Link } from "react-router-dom";
 import { BsChat } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
-import { FaRegUser } from "react-icons/fa";
 import { SlSupport } from "react-icons/sl";
-import { Link } from "react-router-dom";
-import HamburgerMenu from "../components/templates/HamburgerMenu";
 
 function Header() {
   return (
@@ -36,7 +35,18 @@ function Header() {
             <p className="text-sm">دیوار من</p>
           </span>
         </Link> */}
-        
+        <Link to="/chat">
+          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
+            <BsChat className="w-4 h-4" />
+            <p className="text-sm">چت</p>
+          </span>
+        </Link>
+        <Link>
+          <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
+            <SlSupport className="w-4 h-4" />
+            <p className="text-sm">پشتیبانی</p>
+          </span>
+        </Link>
         <HamburgerMenu />
         <Link
           to="/dashboard"
