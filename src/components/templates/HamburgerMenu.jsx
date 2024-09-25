@@ -37,11 +37,11 @@ function HamburgerMenu() {
       <div className="flex items-center  relative">
         {/* {!isOpen ? (
           <div>
-            <AiOutlineCaretDown className="mr-3 text-gray-500" />
+            <AiOutlineCaretDown className="mr-3 text-neutral-500" />
           </div>
         ) : (
           <div>
-            <AiOutlineCaretUp className="mr-3  text-gray-500" />
+            <AiOutlineCaretUp className="mr-3  text-neutral-500" />
           </div>
         )} */}
         <button
@@ -68,20 +68,20 @@ function HamburgerMenu() {
         <div className="grid absolute w-32 border border-neutral-700 bg-neutral-800 rounded shadow-md shadow-neutral-400/20 ">
           {!data ? (
             <Link to="/auth">
-              <div className="flex text-gray-500 items-center border-b border-neutral-700 gap-2 pr-2 py-2 hover:bg-gray-50 hover:transition-colors">
+              <div className="flex text-neutral-500 items-center border-b border-neutral-700 gap-2 pr-2 py-2 hover:bg-neutral-700 hover:transition-colors">
                 <TbLogin className="w-4 h-4" />
-                <p className="text-sm">ورود</p>
+                <p className="text-sm focus:text-neutral-100">ورود</p>
               </div>
             </Link>
           ) : null}
           <Link to="/dashboard">
-            <div className="h-9 flex text-gray-500 items-center pr-2 gap-2 border-b border-neutral-700 hover:bg-gray-50 hover:transition-colors">
+            <div className="h-9 flex text-neutral-500 items-center pr-2 gap-2 border-b border-neutral-700 hover:bg-neutral-700 hover:transition-colors">
               <IoMdPaper />
-              <h3 className="text-xs">آگهی های من</h3>
+              <h3 className="text-xs focus:text-neutral-100">آگهی های من</h3>
             </div>
           </Link>
           {data ? (
-            <div className="h-8 text-gray-500 w-full flex items-center pr-2 my-auto hover:bg-gray-50 hover:transition-colors hover:rounded-b-lg">
+            <div className="h-8 text-neutral-500 w-full flex items-center pr-2 my-auto hover:bg-neutral-700 hover:transition-colors hover:rounded-b">
               <TbLogout />
               <button className="text-xs w-full" onClick={signoutHandler}>
                 خروج

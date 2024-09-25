@@ -15,9 +15,9 @@ function Header() {
               className="w-16 h-10 ml-4 border-l-2 border-neutral-700 pl-6"
             />
           </Link>
-          <span className="flex items-center h-12 gap-1 px-3 py-2 rounded-md cursor-pointer hover:bg-neutral-700 hover:transition-colors">
+          <span className="flex items-center h-12 gap-1 px-3 py-2 focus:text-neutral-100 rounded-md cursor-pointer hover:bg-neutral-700 hover:transition-colors">
             <FiMapPin className="w-4 h-4 text-neutral-400" />
-            <p className="text-sm text-neutral-400">تهران</p>
+            <p className="text-sm text-neutral-400 ">تهران</p>
           </span>
         </div>
         <div className="flex items-center ">
@@ -45,7 +45,7 @@ function Header() {
           </span>
         </Link> */}
         <Link>
-          <span className="flex justify-center text-neutral-400 items-center gap-2 px-3 py-2 rounded-md hover:bg-neutral-700 hover:transition-colors">
+          <span className="flex justify-center text-neutral-400 items-center focus:text-neutral-100 gap-2 px-3 py-2 rounded-md hover:bg-neutral-700 hover:transition-colors">
             <SlSupport className="w-4 h-4" />
             <p className="text-sm">پشتیبانی</p>
           </span>

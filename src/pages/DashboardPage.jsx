@@ -3,7 +3,7 @@ import PostList from "../components/templates/PostList";
 
 function DashboardPage() {
   return (
-    <div className="flex">
+    <div className="flex flex-row">
       <AddPost />
       <PostList />
     </div>
