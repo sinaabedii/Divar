@@ -52,44 +52,55 @@ function AddPost() {
   };
 
   return (
-    <form onChange={changeHandler} className="mx-9 w-1/3 border-l-2">
-      <h3 className="mb-7 border-b-2 border-red-800 w-fit pb-1">
+    <form
+      onChange={changeHandler}
+      className="mx-9 w-1/3 border-l-2 border-neutral-600"
+    >
+      <h3 className="mb-7 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
         افزوردن آگهی
       </h3>
-      <label htmlFor="title" className="block text-sm mb-2 ">
+      <label htmlFor="title" className="block text-sm mb-2 text-neutral-300">
         عنوان
       </label>
       <input
         type="text"
         name="title"
         id="title"
-        className="block w-80 p-1 text-gray-600 border-2 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 "
       />
-      <label htmlFor="content">توضیحات</label>
+      <label htmlFor="content" className="text-neutral-300">
+        توضیحات
+      </label>
       <textarea
         name="content"
         id="content"
-        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 h-24 max-h-fit outline-gray-400"
+        className="block w-80 p-1 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 h-24 max-h-fit "
       />
-      <label htmlFor="amount">قیمت</label>
+      <label htmlFor="amount" className="text-neutral-300">
+        قیمت
+      </label>
       <input
         type="number"
         name="amount"
         id="amount"
-        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1  text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 "
       />
-      <label htmlFor="city">شهر</label>
+      <label htmlFor="city" className="text-neutral-300">
+        شهر
+      </label>
       <input
         type="text"
         name="city"
         id="city"
-        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1  text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 "
       />
-      <label htmlFor="category">دسته بندی</label>
+      <label htmlFor="category" className="text-neutral-300">
+        دسته بندی
+      </label>
       <select
         name="category"
         id="category"
-        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1  text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 "
       >
         {data?.data.map((item) => (
           <option key={item._id} value={item._id}>
@@ -97,16 +108,18 @@ function AddPost() {
           </option>
         ))}
       </select>
-      <label htmlFor="images">عکس</label>
+      <label htmlFor="images" className="text-neutral-300">
+        عکس
+      </label>
       <input
         type="file"
         name="images"
         id="images"
-        className="block w-80 p-1 border-2 text-gray-600 rounded-md mb-3 outline-gray-400"
+        className="block w-80 p-1 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-3 "
       />
       <button
         onClick={addHandler}
-        className="bg-red-800 text-white border-none px-5 py-2 rounded-md cursor-pointer"
+        className="bg-rose-500 text-neutral-800 border-none px-5 py-2 rounded-md cursor-pointer"
       >
         ایجاد
       </button>

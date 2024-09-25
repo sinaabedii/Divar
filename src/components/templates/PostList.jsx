@@ -16,7 +16,7 @@ function PostList() {
         <Loader />
       ) : (
         <>
-          <h3 className="px-4 py-3 border-b-2 border-red-800 w-fit pb-1">
+          <h3 className="px-4 py-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1 ">
             آگهی های شما
           </h3>
           {data_list.map((post) => (
