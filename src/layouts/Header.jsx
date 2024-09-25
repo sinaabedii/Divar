@@ -35,12 +35,12 @@ function Header() {
             <p className="text-sm">دیوار من</p>
           </span>
         </Link> */}
-        <Link to="/chat">
+        {/* <Link to="/chat">
           <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
             <BsChat className="w-4 h-4" />
             <p className="text-sm">چت</p>
           </span>
-        </Link>
+        </Link> */}
         <Link>
           <span className="flex justify-center text-gray-500 items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-50 hover:transition-colors">
             <SlSupport className="w-4 h-4" />
