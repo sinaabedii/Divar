@@ -1,6 +1,6 @@
 import HamburgerMenu from "../components/templates/HamburgerMenu";
 import { Link } from "react-router-dom";
-import { SlSupport } from "react-icons/sl";
+// import { SlSupport } from "react-icons/sl";
 import { FiMapPin } from "react-icons/fi";
 import { IoSearch } from "react-icons/io5";
 
@@ -44,16 +44,16 @@ function Header() {
             <p className="text-sm">چت</p>
           </span>
         </Link> */}
-        <Link>
+        {/* <Link>
           <span className="flex justify-center text-neutral-400 items-center focus:text-neutral-100 gap-2 px-3 py-2 rounded-md hover:bg-neutral-700 hover:transition-colors">
             <SlSupport className="w-4 h-4" />
             <p className="text-sm">پشتیبانی</p>
           </span>
-        </Link>
+        </Link> */}
         <HamburgerMenu />
         <Link
           to="/dashboard"
-          className="bg-rose-500 text-neutral-800 h-10 w-24 leading-10 text-center rounded-md mr-5 hover:bg-rose-400 hover:transition-colors"
+          className="bg-rose-500 text-neutral-800 h-10 w-24 leading-10 text-center rounded-md hover:bg-rose-400 hover:transition-colors"
         >
           ثبت آگهی
         </Link>

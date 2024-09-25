@@ -54,7 +54,7 @@ function AddPost() {
   return (
     <form
       onChange={changeHandler}
-      className="mx-9 w-1/3 border-l-2 border-neutral-600"
+      className="w-1/3 border-l-2 ml-20 border-neutral-600"
     >
       <h3 className="mb-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
         افزوردن آگهی

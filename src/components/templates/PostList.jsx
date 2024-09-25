@@ -11,7 +11,7 @@ function PostList() {
   const baseURL = import.meta.env.VITE_BASE_URL;
 
   return (
-    <div className="mx-9 w-9/12 -mt-4">
+    <div className="w-9/12">
       {isLoading ? (
         <Loader />
       ) : (
@@ -23,24 +23,24 @@ function PostList() {
             {data_list.map((post) => (
               <div
                 key={post._id}
-                className="flex items-center px-2 justify-between border-2 w-full text-center border-gray-300 rounded-md my-1 mt-2 p-1"
+                className="flex items-center px-4 justify-between border-2 w-full text-center border-gray-300 rounded-md my-1 mt-2 p-1"
               >
                 <img
                   src={`${baseURL}${post.images[0]}`}
-                  className="w-28 h-20 rounded text-right"
+                  className="w-28 h-20 rounded text-right border-transparent"
                 />
                 <p className="w-24 text-neutral-500">
                   {new Date(post.createdAt).toLocaleDateString("fa-IR")}
                 </p>
                 <div className=" flex gap-2 text-neutral-500">
-                  <p className="w-24 text-sm text-right">
+                  <p className="w-40 text-sm text-left">
                     {post.options.title}
                   </p>
-                  <span className="w-24 text-xs text-right">
+                  <span className="w-64 text-xs text-left">
                     {post.options.content}
                   </span>
                 </div>
-                <div className="w-56 text-right text-neutral-500">
+                <div className="w-56 text-left text-neutral-500">
                   <span>{sp(post.amount)} تومان</span>
                 </div>
               </div>

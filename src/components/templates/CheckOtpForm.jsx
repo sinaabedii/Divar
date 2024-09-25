@@ -41,7 +41,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
           className="mb-2 py-2 mx-5 border border-solid px-5 text-neutral-200 border-neutral-600 rounded-md placeholder:text-right placeholder:font-extralight bg-transparent outline-none focus:ring-1 focus:ring-rose-700 "
           type="text"
           id="input"
-          maxLength="5"
+          maxLength={5}
           placeholder="کد تأیید ۵ رقمی"
           value={code}
           onChange={(e) => setCode(e.target.value)}

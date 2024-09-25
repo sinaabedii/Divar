@@ -21,11 +21,15 @@ function CategoryForm() {
   };
 
   return (
-    <form onChange={changeHandler} onSubmit={submitHandler} className="px-6">
-      <h3 className="mb-7 border-b-2 border-solid border-red-800 w-fit pb-1">
+    <form
+      onChange={changeHandler}
+      onSubmit={submitHandler}
+      className=" border-l-2 border-neutral-600 ml-10 pl-10"
+    >
+      <h3 className="mb-7 border-b-2 text-neutral-100 border-solid border-red-800 w-fit pb-1">
         دسته بندی جدید
       </h3>
-      <div className="flex gap-3">
+      <div className="gap-3">
         {!!error && (
           <p className="bg-red-800 text-white mb-5 p-1 text-center rounded-md">
             مشکلی پیش آمده است
@@ -36,43 +40,43 @@ function CategoryForm() {
           //   دسته بندی با موفقیت اضافه شد
           // </p>
           alert("دسته بندی با موفقیت اضافه شد")}
-          
-        <span className="flex items-baseline gap-1">
-          <label htmlFor="name" className="flex text-sm mb-3">
-            اسم دسته بندی
+
+        <span className=" items-baseline gap-1">
+          <label htmlFor="name" className="flex text-neutral-200  text-sm mb-3">
+            دسته بندی
           </label>
           <input
             type="text"
             name="name"
             id="name"
-            className="block w-72 p-1 border-2 border-solid rounded-md mb-8"
+            className="block w-72 p-1   rounded-md mb-8 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1"
           />
         </span>
-        <span className="flex items-baseline gap-1">
-          <label htmlFor="slug" className="flex text-sm mb-3">
+        <span className=" items-baseline gap-1">
+          <label htmlFor="slug" className="flex  text-neutral-200 text-sm mb-3">
             اسلاگ
           </label>
           <input
             type="text"
             name="slug"
             id="slug"
-            className="block w-72 p-1 border-2 border-solid rounded-md mb-8"
+            className="block w-72 p-1 rounded-md mb-8 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1"
           />
         </span>
-        <span className="flex items-baseline gap-1">
-          <label htmlFor="icon" className="flex text-sm mb-3">
+        <span className=" items-baseline gap-1">
+          <label htmlFor="icon" className="flex  text-neutral-200 text-sm mb-3">
             آیکون
           </label>
           <input
             type="text"
             name="icon"
             id="icon"
-            className="block w-72 p-1 border-2 border-solid rounded-md mb-8"
+            className="block w-72 p-1 text-neutral-200 bg-neutral-800 border border-neutral-500 outline-none focus:ring-rose-700 focus:ring-1 rounded-md mb-8"
           />
         </span>
         <button
           type="submit"
-          className="bg-red-800 text-white border-none h-9 px-6 rounded-md text-sm cursor-pointer disabled:opacity-50"
+          className="bg-rose-500 text-neutral-800 border-none h-9 px-6 rounded-md text-sm cursor-pointer disabled:opacity-50"
           disabled={isLoading}
         >
           ایجاد

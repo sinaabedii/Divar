@@ -16,8 +16,8 @@ function CategoryList() {
   };
 
   return (
-    <div className="mx-6 my-5">
-      <h3 className="mb-4 border-b-2 border-solid border-red-800 w-fit pb-1">
+    <div className="w-full overflow-y-scroll pl-2 h-[405px] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-rose-600">
+      <h3 className="mb-4 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
         دسته بندی ها
       </h3>
       {isLoading ? (
@@ -26,13 +26,15 @@ function CategoryList() {
         data.data?.map((item) => (
           <div
             key={item._id}
-            className="flex my-2 p-4 border-2 border-solid rounded-md"
+            className="flex w- my-2 p-4 border items-center border-gray-300 rounded-md"
           >
             <img src={`${item.icon}.svg`} />
-            <h5 className="mr-3 text-sm w-32">{item.name}</h5>
-            <p className="w-full text-left text-red-800">slug : {item.slug}</p>
+            <h5 className="mr-3 text-sm w-32 text-neutral-500">{item.name}</h5>
+            <p className="w-full text-left text-neutral-500">
+              slug : {item.slug}
+            </p>
             <button onClick={() => deleteHandler(item._id)}>
-              <MdDelete className="text-gray-700 w-8 h-6 mr-3 cursor-pointer hover:scale-125 bg-none transition-colors" />
+              <MdDelete className="text-neutral-500 w-8 h-6 mr-3 cursor-pointer hover:text-rose-600 transition-colors" />
             </button>
           </div>
         ))

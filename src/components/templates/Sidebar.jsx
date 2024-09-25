@@ -6,7 +6,7 @@ function Sidebar({ categories }) {
         {categories?.data.map((category) => (
           <li
             key={category._id}
-            className="flex font-extralight text-neutral-400 cursor-pointer hover:text-gray-700 hover:transition-colors"
+            className="flex font-extralight text-neutral-400 cursor-pointer"
           >
             <img className="w-5 h-5" src={`${category.icon}.svg`} />
             <p className="font-extralight mr-2 text-neutral-400">

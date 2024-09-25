@@ -29,8 +29,9 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
       </span>
       <div className="relative flex">
         <input
-          className="m-4 w-full py-2 mx-5 border text-neutral-200 bg-neutral-800 border-neutral-700 pr-5 pl-20  rounded-md placeholder:text-right placeholder:font-extralight outline-none focus:ring-rose-700 focus:ring-1"
+          className="m-4 w-full py-2 mx-5 border  text-neutral-200 bg-neutral-800 border-neutral-700 pr-5 pl-20  rounded-md placeholder:text-right placeholder:font-extralight outline-none focus:ring-rose-700 focus:ring-1"
           type="tel"
+          maxLength={11}
           id="input"
           placeholder="شماره موبایل"
           value={mobile}

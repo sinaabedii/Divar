@@ -21,7 +21,7 @@ function HomePage() {
       {postsLoading || categoryLoading ? (
         <Loader />
       ) : (
-        <div className="flex mx-14 ">
+        <div className=" flex mx-14 ">
           <Sidebar categories={categories} />
           <Main AllPosts={AllPosts} />
         </div>
