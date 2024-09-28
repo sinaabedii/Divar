@@ -1,15 +1,17 @@
 function Sidebar({ categories }) {
   return (
-    <div className="w-2/12 mt-8 pr-3">
-      <h4 className="text-sm text-neutral-300">دسته ها</h4>
-      <ul className="grid gap-5 mt-3">
+    <div className="mb-5 mx-8">
+      <h4 className="text-sm collapse md:visible lg:visible xl:visible text-neutral-300">
+        دسته ها
+      </h4>
+      <ul className="grid grid-cols-4 items-baseline mt-3">
         {categories?.data.map((category) => (
           <li
             key={category._id}
-            className="flex font-extralight text-neutral-400 cursor-pointer"
+            className="grid grid-cols-1 text-center mb-4 items-center gap-2 font-extralight text-neutral-400 hover:text-neutral-200 cursor-pointer"
           >
-            <img className="w-5 h-5" src={`${category.icon}.svg`} />
-            <p className="font-extralight mr-2 text-neutral-400">
+            <img className="w-6 h-6 mx-auto" src={`${category.icon}.svg`} />
+            <p className="text-xs w-fi md:text-lg lg:text-xl xl:text-sm">
               {category.name}
             </p>
           </li>

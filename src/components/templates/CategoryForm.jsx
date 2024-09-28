@@ -18,6 +18,7 @@ function CategoryForm() {
     event.preventDefault();
     if (!form.name || !form.slug || !form.icon) return;
     mutate(form);
+    form("");
   };
 
   return (
@@ -35,11 +36,11 @@ function CategoryForm() {
             مشکلی پیش آمده است
           </p>
         )}
-        {data?.status === 201 &&
+        {/* {data?.status === 201 &&
           // <p className="bg-red-800 text-white mb-5 p-1 text-center rounded-md">
           //   دسته بندی با موفقیت اضافه شد
           // </p>
-          alert("دسته بندی با موفقیت اضافه شد")}
+          alert("دسته بندی با موفقیت اضافه شد")} */}
 
         <span className=" items-baseline gap-1">
           <label htmlFor="name" className="flex text-neutral-200  text-sm mb-3">

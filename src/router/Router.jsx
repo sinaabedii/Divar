@@ -9,9 +9,10 @@ import AdminPage from "../pages/AdminPage";
 import PageNotFound from "../pages/PageNotFound";
 import Loader from "../components/modules/Loader";
 import GeneralTermsConditions from "../pages/GeneralTermsConditions";
-import Chat from "../pages/Chat";
 import AccountPrivacyPolicies from "../pages/AccountPrivacyPolicies";
 import DetailsPage from "../pages/DetailsPage";
+import User from "../pages/User";
+import Chat from "../pages/Chat";
 
 function Router() {
   const { data, isLoading } = useQuery(["profile"], getProfile);
@@ -47,8 +48,9 @@ function Router() {
         path="/account_privacy_policies"
         element={<AccountPrivacyPolicies />}
       />
-      <Route path="/chat" element={<Chat />} />
       <Route path="/post/:id" element={<DetailsPage />} />
+      <Route path="/user" element={<User />} />
+      <Route path="/chat" element={<Chat />} />
     </Routes>
   );
 }

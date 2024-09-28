@@ -54,7 +54,7 @@ function HamburgerMenu() {
               <h2>دیوار من</h2>
             </span>
           ) : (
-            <Link to="/auth">
+            <Link to="/auth" className="w-fit">
               <span className="flex items-center gap-2">
                 <TbLogin className="w-4 h-4" />
                 <h2>وارد شوید</h2>

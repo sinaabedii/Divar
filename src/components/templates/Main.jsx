@@ -6,16 +6,15 @@ function Main({ AllPosts, _id }) {
   const baseURL = import.meta.env.VITE_BASE_URL;
 
   return (
-    <div className="w-10/12">
-      <p className="text-left ml-2 font-extralight text-xs text-neutral-400">
-        دیوار تهران - نیازمندی‌ های رایگان، آگهی‌های خرید، فروش نو و دست دوم و
-        کارکرده، استخدام و خدمات
+    <div className="xl:max-w-7xl lg:max-w-6xl md:max-w-5xl sm:max-w-4xl mx-auto">
+      <p className="font-extralight text-right text-xs text-neutral-400 mx-14 h-auto">
+        دیوار تهران - نیازمندی‌ های رایگان، آگهی‌های خرید، فروش نو و دست دوم، استخدام و خدمات
       </p>
-      <div className="flex flex-wrap  justify-between mt-2">
+      <div className="flex flex-wrap xl:justify-between justify-center mx-auto mt-2">
         {data.map((post) => (
           <Link to={`/post/${_id}`} key={post._id}>
-            <div className=" w-80 flex justify-between border border-neutral-600 m-2 p-4 rounded-md">
-              <div className="flex flex-col justify-between">
+            <div className="w-80 flex justify-between border border-neutral-600 m-2 mx-auto p-4 rounded-md">
+              <div className="flex flex-col justify-between ">
                 <p className="text-neutral-200">{post.options.title}</p>
                 <div className="text-sm text-neutral-400">
                   <p>{sp(post.amount)} تومان</p>

@@ -16,7 +16,7 @@ function App() {
           <Toaster />
         </Layout>
       </BrowserRouter>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 }

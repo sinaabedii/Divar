@@ -28,7 +28,7 @@ function CategoryList() {
             key={item._id}
             className="flex w- my-2 p-4 border items-center border-gray-300 rounded-md"
           >
-            <img src={`${item.icon}.svg`} />
+            <img className="h-5 w-5" src={`${item.icon}.svg`} />
             <h5 className="mr-3 text-sm w-32 text-neutral-500">{item.name}</h5>
             <p className="w-full text-left text-neutral-500">
               slug : {item.slug}
