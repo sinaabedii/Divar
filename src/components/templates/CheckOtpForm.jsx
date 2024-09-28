@@ -24,8 +24,10 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
   };
   const signInHandler = () => {
     refetch();
-    if (!data) {
+    if (code) {
       toast.success("شما با موفقیت وارد شدید .");
+    } else {
+      toast.error("کد را وارد کنید.");
     }
   };
 
@@ -38,7 +40,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
         <p className="text-lg text-neutral-200 font-normal  p-4">
           ورود به حساب کاربری
         </p>
-        <Link to="/user">
+        <Link to="/">
           <IoCloseSharp className="h-5 w-5 ml-2 text-neutral-300" />
         </Link>
       </span>
@@ -60,7 +62,7 @@ function CheckOtpForm({ code, setCode, mobile, setStep }) {
         />
         <span className="text-left ml-5">
           <button
-            className="bg-neutral-700 text-xs text-neutral-400 w-28 rounded-3xl mt-1  py-1.5  hover:bg-gray-200 hover:transition-colors"
+            className="bg-neutral-700 text-xs text-neutral-200 w-28 rounded-3xl mt-1  py-1.5  hover:bg-neutral-600 hover:text-neutral-100 hover:transition-colors"
             onClick={() => setStep(1)}
           >
             تغییر شمارۀ موبایل

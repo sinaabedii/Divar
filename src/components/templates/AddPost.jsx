@@ -4,6 +4,8 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getCategory } from "../../services/admin";
 import { getCookie } from "../../utils/cookie";
 import toast from "react-hot-toast";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function AddPost() {
   const [form, setForm] = useState({
@@ -52,13 +54,15 @@ function AddPost() {
   };
 
   return (
-    <form
-      onChange={changeHandler}
-      className=" border-neutral-600 mx-auto mt-2"
-    >
-      <h3 className="mb-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
-        افزوردن آگهی
-      </h3>
+    <form onChange={changeHandler} className=" border-neutral-600 mx-auto mt-2">
+      <span className=" flex items-center justify-between">
+        <h3 className="mb-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
+          افزوردن آگهی
+        </h3>
+        <Link to="/user">
+          <IoMdArrowRoundBack className="w-6 h-6 text-neutral-100" />
+        </Link>
+      </span>
       <label htmlFor="title" className="block text-sm mb-2 text-neutral-300">
         عنوان
       </label>

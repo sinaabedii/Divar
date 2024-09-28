@@ -1,6 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { addCategory } from "../../services/admin";
+import { Link } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 function CategoryForm() {
   const queryClient = useQueryClient();
@@ -27,9 +29,14 @@ function CategoryForm() {
       onSubmit={submitHandler}
       className="mx-auto mb-6"
     >
-      <h3 className="mb-4 border-b-2 text-neutral-100 border-solid border-rose-600 w-fit pb-1 -mr-3">
-        دسته بندی جدید
-      </h3>
+      <span className="flex justify-between items-center">
+        <h3 className="mb-4 border-b-2 text-neutral-100 border-solid border-rose-600 w-fit pb-1 -mr-3">
+          دسته بندی جدید
+        </h3>
+        <Link to="/user">
+          <IoMdArrowRoundBack className="w-6 h-6 text-neutral-100" />
+        </Link>
+      </span>
       <div className="gap-3">
         {!!error && (
           <p className="bg-red-800 text-white mb-5 p-1 text-center rounded-md">

@@ -11,7 +11,7 @@ function PostList() {
   const baseURL = import.meta.env.VITE_BASE_URL;
 
   return (
-    <div className=" mx-8 grid w-fit">
+    <div className=" mx-auto grid ">
       {isLoading ? (
         <Loader />
       ) : (
@@ -19,7 +19,7 @@ function PostList() {
           <h3 className="px-4 py-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1 mb-3">
             آگهی های شما
           </h3>
-          <div className="overflow-y-scroll pl-2 h-[510px] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-rose-600">
+          <div className="overflow-y-scroll border rounded-md px-2 grid mb-10 h-[310px] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-rose-600">
             {data_list.map((post) => (
               <div
                 key={post._id}

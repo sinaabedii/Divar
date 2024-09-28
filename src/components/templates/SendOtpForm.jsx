@@ -1,16 +1,25 @@
 import { Link } from "react-router-dom";
 import { sendOtp } from "../../services/auth";
 import { IoCloseSharp } from "react-icons/io5";
+import toast from "react-hot-toast";
 
 function SendOtpForm({ mobile, setStep, setMobile }) {
   const submitHandler = async (event) => {
     event.preventDefault();
     if (mobile.length !== 11) return;
-
     const { response, error } = await sendOtp(mobile);
     if (response) setStep(2);
     if (error) console.log(error.response.data.message);
   };
+
+  const acceptHandler = () => {
+    if (mobile.length === 11) {
+      toast.success("شما با موفقیت وارد شدید .");
+    } else {
+      toast.error("کد را وارد کنید.");
+    }
+  };
+
   return (
     <form
       onSubmit={submitHandler}
@@ -20,7 +29,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
         <p className="text-lg text-neutral-200 font-normal  p-4">
           ورود به حساب کاربری
         </p>
-        <Link to="/user">
+        <Link to="/">
           <IoCloseSharp className="h-5 w-5 ml-2 text-neutral-300" />
         </Link>
       </span>
@@ -67,6 +76,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
       </p>
       <span className="absolute w-full mx-auto mb-16 bottom-0 px-2  border-t border-neutral-700 pt-3 ">
         <button
+          onClick={acceptHandler}
           className="w-full py-2  border-none bg-rose-500 text-neutral-800 rounded-md text-lg cursor-pointer hover:bg-rose-400 hover:transition-colors"
           type="submit"
         >
