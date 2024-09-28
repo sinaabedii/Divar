@@ -24,9 +24,6 @@ function User() {
       toast.error("اول وارد شوید");
     }
   };
-  const signInHandler = () => {
-    refetch();
-  };
 
   return (
     <div className="grid mx-4">

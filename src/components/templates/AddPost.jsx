@@ -54,7 +54,7 @@ function AddPost() {
   return (
     <form
       onChange={changeHandler}
-      className="w-1/3 border-l-2 ml-20 border-neutral-600"
+      className=" border-neutral-600 mx-auto mt-2"
     >
       <h3 className="mb-3 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
         افزوردن آگهی
@@ -119,7 +119,7 @@ function AddPost() {
       />
       <button
         onClick={addHandler}
-        className="bg-rose-500 text-neutral-800 border-none px-5 py-2 rounded-md cursor-pointer"
+        className="bg-rose-500 text-neutral-800 border-none mr-60 inline px-5 py-2 rounded-md cursor-pointer"
       >
         ایجاد
       </button>

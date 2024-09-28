@@ -3,7 +3,7 @@ import CategoryList from "../components/templates/CategoryList";
 
 function AdminPage() {
   return (
-    <div className="flex items-baseline mx-16">
+    <div className="grid">
       <CategoryForm />
       <CategoryList />
     </div>

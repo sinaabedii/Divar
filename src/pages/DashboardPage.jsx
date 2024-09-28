@@ -3,7 +3,7 @@ import PostList from "../components/templates/PostList";
 
 function DashboardPage() {
   return (
-    <div className="flex items-baseline mx-16">
+    <div className="grid">
       <AddPost />
       <PostList />
     </div>

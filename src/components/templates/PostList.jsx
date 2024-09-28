@@ -11,7 +11,7 @@ function PostList() {
   const baseURL = import.meta.env.VITE_BASE_URL;
 
   return (
-    <div className="w-9/12">
+    <div className=" mx-8 grid w-fit">
       {isLoading ? (
         <Loader />
       ) : (
@@ -23,26 +23,30 @@ function PostList() {
             {data_list.map((post) => (
               <div
                 key={post._id}
-                className="flex items-center px-4 justify-between border-2 w-full text-center border-gray-300 rounded-md my-1 mt-2 p-1"
+                className="flex items-center justify-between px-4 border w-full text-center border-gray-300 rounded-md my-1 mt-2 p-1"
               >
-                <img
-                  src={`${baseURL}${post.images[0]}`}
-                  className="w-28 h-20 rounded text-right border-transparent"
-                />
-                <p className="w-24 text-neutral-500">
-                  {new Date(post.createdAt).toLocaleDateString("fa-IR")}
-                </p>
-                <div className=" flex gap-2 text-neutral-500">
-                  <p className="w-40 text-sm text-left">
-                    {post.options.title}
+                <span className="grid mt-2">
+                  <img
+                    src={`${baseURL}${post.images[0]}`}
+                    className="w-28 h-20 rounded ml-2 text-right border-transparent"
+                  />
+                  <p className=" text-rose-500">
+                    {new Date(post.createdAt).toLocaleDateString("fa-IR")}
                   </p>
-                  <span className="w-64 text-xs text-left">
-                    {post.options.content}
-                  </span>
-                </div>
-                <div className="w-56 text-left text-neutral-500">
-                  <span>{sp(post.amount)} تومان</span>
-                </div>
+                </span>
+                <span className="text-left">
+                  <div className="grid gap-1 mb-10 ">
+                    <p className="text-sm text-neutral-300">
+                      {post.options.title}
+                    </p>
+                    <span className=" text-xs text-neutral-400">
+                      {post.options.content}
+                    </span>
+                  </div>
+                  <div className=" text-neutral-300">
+                    <span>{sp(post.amount)} تومان</span>
+                  </div>
+                </span>
               </div>
             ))}
           </div>

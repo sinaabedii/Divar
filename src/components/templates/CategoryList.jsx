@@ -16,7 +16,7 @@ function CategoryList() {
   };
 
   return (
-    <div className="w-full overflow-y-scroll pl-2 h-[405px] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-rose-600">
+    <div className="overflow-y-scroll mt-4 mx-auto h-[405px] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-rose-600">
       <h3 className="mb-4 border-b-2 border-rose-600 text-neutral-100 w-fit pb-1">
         دسته بندی ها
       </h3>

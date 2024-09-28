@@ -25,9 +25,9 @@ function CategoryForm() {
     <form
       onChange={changeHandler}
       onSubmit={submitHandler}
-      className=" border-l-2 border-neutral-600 ml-10 pl-10"
+      className="mx-auto mb-6"
     >
-      <h3 className="mb-7 border-b-2 text-neutral-100 border-solid border-red-800 w-fit pb-1">
+      <h3 className="mb-4 border-b-2 text-neutral-100 border-solid border-rose-600 w-fit pb-1 -mr-3">
         دسته بندی جدید
       </h3>
       <div className="gap-3">
