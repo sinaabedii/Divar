@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { sendOtp } from "../../services/auth";
+import { IoCloseSharp } from "react-icons/io5";
 
 function SendOtpForm({ mobile, setStep, setMobile }) {
   const submitHandler = async (event) => {
@@ -13,11 +14,16 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
   return (
     <form
       onSubmit={submitHandler}
-      className="container max-w-md m-auto flex flex-col mt-24 border border-solid border-neutral-700 rounded-md p-1 shadow-md shadow-neutral-400/30"
+      className="container w-full h-screen mx-auto flex flex-col"
     >
-      <p className="text-lg text-neutral-200 font-normal mb-3 border-b border-neutral-700 pb-6 p-5">
-        ورود به حساب کاربری
-      </p>
+      <span className="flex justify-between px-1 items-center border-b border-neutral-700">
+        <p className="text-lg text-neutral-200 font-normal  p-4">
+          ورود به حساب کاربری
+        </p>
+        <Link to="/user">
+          <IoCloseSharp className="h-5 w-5 ml-2 text-neutral-300" />
+        </Link>
+      </span>
       <label htmlFor="input" className="p-5 mb-3 text-lg text-neutral-200">
         شماره موبایل خود را وارد کنید
       </label>
@@ -41,7 +47,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
           ۹۸+
         </p>
       </div>
-      <p className="text-neutral-300 text-sm font-extralight px-6 pb-8 mb-4 border-b border-neutral-700">
+      <p className="text-neutral-300 text-sm font-extralight px-6 pb-8 mb-4 ">
         <Link
           to="/General_terms_and_conditions"
           target="_blank"
@@ -59,12 +65,14 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
         </Link>
         دیوار را می پذیرم.
       </p>
-      <button
-        className="w-28 py-2 mr-80 border-none mb-3 bg-rose-500 text-neutral-800 rounded-md text-lg cursor-pointer hover:bg-rose-400 hover:transition-colors"
-        type="submit"
-      >
-        تأیید
-      </button>
+      <span className="absolute w-full mx-auto mb-16 bottom-0 px-2  border-t border-neutral-700 pt-3 ">
+        <button
+          className="w-full py-2  border-none bg-rose-500 text-neutral-800 rounded-md text-lg cursor-pointer hover:bg-rose-400 hover:transition-colors"
+          type="submit"
+        >
+          تأیید
+        </button>
+      </span>
     </form>
   );
 }

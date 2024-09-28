@@ -10,27 +10,27 @@ import { TbLogin, TbLogout } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa";
 
 function HamburgerMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { refetch, data } = useQuery(["profile"], getProfile);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const { refetch, data } = useQuery(["profile"], getProfile);
 
-  const signoutHandler = () => {
-    deleteAllCookies();
-    refetch();
-    setIsOpen((prev) => !prev);
-    if (data) {
-      toast.success("شما با موفقیت خارج شدید .");
-    } else {
-      toast.error("اول وارد شوید");
-    }
-  };
+  // const signoutHandler = () => {
+  //   deleteAllCookies();
+  //   refetch();
+  //   setIsOpen((prev) => !prev);
+  //   if (data) {
+  //     toast.success("شما با موفقیت خارج شدید .");
+  //   } else {
+  //     toast.error("اول وارد شوید");
+  //   }
+  // };
 
-  const isOpenHandler = () => {
-    if (!data) {
-      setIsOpen(false);
-    } else {
-      setIsOpen((prev) => !prev);
-    }
-  };
+  // const isOpenHandler = () => {
+  //   if (!data) {
+  //     setIsOpen(false);
+  //   } else {
+  //     setIsOpen((prev) => !prev);
+  //   }
+  // };
 
   return (
     <div className="mx-auto space-x-2 items-center rounded-t-lg">
