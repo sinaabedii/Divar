@@ -14,7 +14,7 @@ function SendOtpForm({ mobile, setStep, setMobile }) {
 
   const acceptHandler = () => {
     if (mobile.length === 11) {
-      toast.success("شما با موفقیت وارد شدید .");
+      toast.success("کد برای شما ارسال شد .");
     } else {
       toast.error("کد را وارد کنید.");
     }
