@@ -14,7 +14,7 @@ function Footer() {
           </Link>
         </button>
         <button className="grid w-16 text-neutral-400 hover:bg-neutral-600 hover:text-neutral-300 transition-colors py-1">
-          <Link className="focus:text-rose-500">
+          <Link to="/category" className="focus:text-rose-500">
             <IoIosMenu className="w-5 h-5 mx-auto mb-1" />
             <h3 className="text-sm">دسته ها</h3>
           </Link>

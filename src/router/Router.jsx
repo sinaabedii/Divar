@@ -13,6 +13,8 @@ import AccountPrivacyPolicies from "../pages/AccountPrivacyPolicies";
 import DetailsPage from "../pages/DetailsPage";
 import User from "../pages/User";
 import Chat from "../pages/Chat";
+import CategoryList from "../components/templates/CategoryList";
+import CategoryPage from "../pages/CategoryPage";
 
 function Router() {
   const { data, isLoading } = useQuery(["profile"], getProfile);
@@ -51,6 +53,7 @@ function Router() {
       <Route path="/post/:id" element={<DetailsPage />} />
       <Route path="/user" element={<User />} />
       <Route path="/chat" element={<Chat />} />
+      <Route path="/category" element={<CategoryPage />} />
     </Routes>
   );
 }

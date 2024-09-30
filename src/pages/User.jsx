@@ -12,9 +12,12 @@ import {
 } from "react-icons/md";
 import { SiAparat } from "react-icons/si";
 import { TbLogin, TbLogout } from "react-icons/tb";
+import { GrUserAdmin } from "react-icons/gr";
+import { BiCategory } from "react-icons/bi";
 
 function User() {
   const { refetch, data } = useQuery(["profile"], getProfile);
+
   const signoutHandler = () => {
     deleteAllCookies();
     refetch();
@@ -33,8 +36,17 @@ function User() {
         </p>
         {data ? (
           <span className="flex w-full px-2 mx-auto text-neutral-400 border-b border-neutral-600 items-center mb-4 py-2 gap-2 hover:text-neutral-200 transition-colors">
-            <FaRegUser className="w-4 h-4" />
-            <h2>کاربر دیوار</h2>
+            {data.data?.role === "ADMIN" ? (
+              <span className="flex items-center gap-2">
+                <GrUserAdmin />
+                <h1>ادمین</h1>
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <FaRegUser className="w-4 h-4" />
+                <h2>کاربر دیوار</h2>
+              </span>
+            )}
           </span>
         ) : (
           <Link to="/auth">
@@ -44,15 +56,27 @@ function User() {
             </span>
           </Link>
         )}
+
         {data ? (
           <Link to="/dashboard">
             <span className="flex text-neutral-400 items-center py-2 mx-3 gap-2 w-full hover:text-neutral-200 transition-colors">
               <FaUser />
-              <h3 className="text-sm">آگهی های من</h3>
+              {data.data?.role === "ADMIN" ? (
+                <h3 className="text-sm">آگهی ها</h3>
+              ) : (
+                <h3 className="text-sm">آگهی های من</h3>
+              )}
             </span>
           </Link>
         ) : null}
-
+        {data.data?.role === "ADMIN" ? (
+          <Link to="/admin">
+            <span className="flex text-neutral-400 items-center py-2 mx-3 gap-2 w-full hover:text-neutral-200 transition-colors">
+              <BiCategory />
+              <h3 className="text-sm">دسته بندی ها</h3>
+            </span>
+          </Link>
+        ) : null}
         <Link to="/General_terms_and_conditions">
           <span className="flex text-neutral-400 items-center py-2 mx-3 gap-2 w-full hover:text-neutral-200 transition-colors">
             <MdOutlineMiscellaneousServices />
@@ -60,7 +84,7 @@ function User() {
           </span>
         </Link>
         <Link to="/account_privacy_policies">
-          <span className="flex w-full px-2 mx-auto pb-4 text-neutral-400 border-b border-neutral-600 items-center py-2 gap-2 hover:text-neutral-200  transition-colors">
+          <span className="flex text-neutral-400 items-center py-2 mx-3 gap-2 w-full hover:text-neutral-200  transition-colors">
             <MdOutlinePrivacyTip />
             <h3 className="text-sm">حریم خصوصی</h3>
           </span>
@@ -80,7 +104,6 @@ function User() {
           <IoMdInformationCircleOutline />
           <h3 className="text-sm">درباره دیوار</h3>
         </span>
-
         <div className="flex w-44 justify-between inset-x-0 bottom-20 absolute  mx-auto ">
           <a href="https://twitter.com/divar_official">
             <FaTwitter className="w-4 h-4 text-neutral-400 hover:text-neutral-200 cursor-pointer transition-colors" />

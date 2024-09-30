@@ -5,9 +5,11 @@ function GeneralTermsConditions() {
   return (
     <div className="mx-5 leading-10 mt-3">
       <span className="flex justify-between items-center">
-        <h1 className="text-lg text-neutral-200 font-medium">شرایط و قوانین کلی استفاده از دیوار</h1>
+        <h1 className="text-lg text-neutral-200 font-medium">
+          شرایط و قوانین کلی استفاده از دیوار
+        </h1>
         <Link to="/user">
-          <IoMdArrowRoundBack className="w-6 h-6 text-neutral-100" />
+          <IoMdArrowRoundBack className="w-6 h-6 cursor-pointer text-neutral-100" />
         </Link>
       </span>
       <span className="text-neutral-400">

@@ -16,7 +16,7 @@ function PageNotFound() {
           برای دیدن آگهی‌ها به صفحهٔ اصلی دیوار برگردید.
         </p>
         <Link to="/" className="mx-auto">
-          <button className="bg-red-800 w-fit mx-auto px-3 py-1.5 rounded-md text-white hover:bg-red-900 hover:transition-colors ">
+          <button className="bg-red-800 w-fit mx-auto px-3 cursor-pointer py-1.5 rounded-md text-white hover:bg-red-900 hover:transition-colors ">
             صفحه اصلی دیوار
           </button>
         </Link>

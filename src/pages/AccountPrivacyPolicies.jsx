@@ -10,7 +10,7 @@ function AccountPrivacyPolicies() {
           سیاست‌نامه حریم خصوصی
         </h1>
         <Link to="/user">
-          <IoMdArrowRoundBack className="w-6 h-6 text-neutral-100" />
+          <IoMdArrowRoundBack className="w-6 h-6 cursor-pointer text-neutral-100" />
         </Link>
       </span>
       <span className="text-neutral-400">
